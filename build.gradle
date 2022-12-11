@@ -1,0 +1,44 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.2.2"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion           =   29
+    applicationId               =   "com.me.afunx.xfyundemo"
+    minSdkVersion               =   21
+    targetSdkVersion            =   29
+    versionCode                 =   1
+    versionName                 =   "v1.0.0"
+    testInstrumentationRunner   =   "androidx.test.runner.AndroidJUnitRunner"
+}
+
+ext {
+    lib_appcompat               =   "androidx.appcompat:appcompat:1.2.0"
+    lib_material                =   "com.google.android.material:material:1.2.1"
+    lib_constraintlayout        =   "androidx.constraintlayout:constraintlayout:2.0.1"
+    lib_juint                   =   "junit:junit:4.+"
+    lib_test_ext_junit          =   "androidx.test.ext:junit:1.1.2"
+    lib_test_espresso           =   "androidx.test.espresso:espresso-core:3.3.0"
+}
